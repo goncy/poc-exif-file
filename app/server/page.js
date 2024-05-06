@@ -1,9 +1,9 @@
-"use client"
-
 import {load} from "exifreader"
 
 export default function Home() {
   async function submit(formData) {
+    "use server";
+
     const file = formData.get("image");
     const exif = await load(file);
 
