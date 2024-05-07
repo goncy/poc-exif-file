@@ -1,10 +1,11 @@
-import {load} from "exifreader"
+"use client"
 
 export default function Home() {
   async function submit(formData) {
-    "use server";
-
-    const exif = await load(formData.get("image"));
+    const exif = await fetch('/route-handler/extract', {
+      method: 'POST',
+      body: formData,
+    }).then(res => res.json())
 
     console.log(exif);
   }
