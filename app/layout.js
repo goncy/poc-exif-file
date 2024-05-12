@@ -9,6 +9,7 @@ export default function RootLayout({ children }) {
       <body>
         <nav style={{display: 'flex', gap: 24, marginBottom: 24}}>
           <a href="/">Client</a>
+          <a href="/no-exif">No Exif</a>
           <a href="/server">Server</a>
           <a href="/route-handler">Route handler</a>
         </nav>
